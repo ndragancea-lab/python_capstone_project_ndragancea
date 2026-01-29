@@ -9,8 +9,6 @@ Quick navigation guide for the DataForge project.
 | [README.md](README.md) | **Main documentation** - Usage guide, examples, FAQ | Start here for usage |
 | [FINAL_REPORT.md](FINAL_REPORT.md) | **Project completion report** - Statistics, achievements | Review after completion |
 | [PROJECT_REQUIREMENTS_AND_ARCHITECTURE.md](PROJECT_REQUIREMENTS_AND_ARCHITECTURE.md) | Complete requirements and architecture | Understanding design decisions |
-| [DEVELOPMENT_LOG.md](DEVELOPMENT_LOG.md) | Development history by stage | Understanding development process |
-| [REQUIREMENTS_TRACEABILITY_MATRIX.md](REQUIREMENTS_TRACEABILITY_MATRIX.md) | Requirements tracking | Verifying requirements compliance |
 | [examples/README.md](examples/README.md) | Example schemas documentation | Learning schema patterns |
 
 ---
@@ -166,13 +164,13 @@ python -m dataforge --help
 3. Review [PROJECT_REQUIREMENTS_AND_ARCHITECTURE.md](PROJECT_REQUIREMENTS_AND_ARCHITECTURE.md)
 
 ### Want to understand the implementation?
-1. Review [DEVELOPMENT_LOG.md](DEVELOPMENT_LOG.md) - See development stages
+1. Check [PROJECT_REQUIREMENTS_AND_ARCHITECTURE.md](PROJECT_REQUIREMENTS_AND_ARCHITECTURE.md) - See architecture and design
 2. Check module docstrings in [dataforge/](dataforge/)
 3. Study test cases in [tests/](tests/)
 
 ### Want to verify completeness?
 1. Check [FINAL_REPORT.md](FINAL_REPORT.md) - Complete statistics
-2. Review [REQUIREMENTS_TRACEABILITY_MATRIX.md](REQUIREMENTS_TRACEABILITY_MATRIX.md)
+2. Review [PROJECT_REQUIREMENTS_AND_ARCHITECTURE.md](PROJECT_REQUIREMENTS_AND_ARCHITECTURE.md) - All requirements
 3. Run `pytest -v` to see all tests
 
 ---

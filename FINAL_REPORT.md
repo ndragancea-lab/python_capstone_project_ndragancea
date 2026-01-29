@@ -229,10 +229,10 @@ DataForge is a comprehensive console utility for generating test JSON data based
 
 ### Project Documentation
 1. **PROJECT_REQUIREMENTS_AND_ARCHITECTURE.md** - Complete requirements and architecture
-2. **DEVELOPMENT_LOG.md** - Detailed development history
-3. **REQUIREMENTS_TRACEABILITY_MATRIX.md** - Requirements tracking
-4. **examples/README.md** - Schema examples documentation
-5. **FINAL_REPORT.md** - This document
+2. **examples/README.md** - Schema examples documentation
+3. **FINAL_REPORT.md** - This document
+4. **PROJECT_INDEX.md** - Navigation guide
+5. **SUBMISSION_CHECKLIST.md** - Pre-submission verification
 
 ### Example Schemas (6)
 1. **user_activity_schema.json** - User behavior tracking
@@ -426,12 +426,14 @@ python_capstone_project_ndragancea/
 │   ├── web_logs_schema.json
 │   ├── financial_transactions_schema.json
 │   └── social_media_schema.json
+├── venv/                       # Virtual environment (not in git)
 ├── default.ini                 # Configuration file
 ├── requirements.txt            # Python dependencies
+├── run_dataforge.sh            # Convenience script
 ├── README.md                   # Main documentation
 ├── PROJECT_REQUIREMENTS_AND_ARCHITECTURE.md
-├── DEVELOPMENT_LOG.md
-├── REQUIREMENTS_TRACEABILITY_MATRIX.md
+├── PROJECT_INDEX.md
+├── SUBMISSION_CHECKLIST.md
 └── FINAL_REPORT.md            # This file
 ```
 
