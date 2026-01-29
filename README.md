@@ -55,39 +55,83 @@
 
 ### Prerequisites
 - Python 3.6 or higher
-- pip (Python package installer)
+- Git
 
 ### Steps
 
 1. **Clone the repository:**
 ```bash
-git clone <repository-url>
+git clone https://github.com/ndragancea-lab/python_capstone_project_ndragancea.git
 cd python_capstone_project_ndragancea
 ```
 
-2. **Install dependencies:**
+2. **Create virtual environment:**
+```bash
+python3 -m venv venv
+```
+
+3. **Activate virtual environment:**
+```bash
+# On macOS/Linux:
+source venv/bin/activate
+
+# On Windows:
+venv\Scripts\activate
+```
+
+4. **Install dependencies:**
 ```bash
 pip install -r requirements.txt
 ```
 
-3. **Verify installation:**
+5. **Verify installation:**
 ```bash
 python -m dataforge --help
 ```
+
+**Note:** Always activate the virtual environment before running the utility.
 
 ---
 
 ## ⚡ Quick Start
 
-### Generate 3 files with random user data:
+**First, activate the virtual environment:**
 ```bash
-python -m dataforge . --files_count=3 --file_name=users \
-  --data_schema='{"id":"int:rand","name":"str:rand","age":"int:rand(18,80)"}'
+cd python_capstone_project_ndragancea
+source venv/bin/activate  # On macOS/Linux
+# or
+venv\Scripts\activate     # On Windows
 ```
 
-### Output 10 lines to console:
+### Option 1: Using the convenience script (macOS/Linux only)
 ```bash
+# Make script executable (first time only)
+chmod +x run_dataforge.sh
+
+# Generate files with random user data
+./run_dataforge.sh . --files_count=3 --file_name=users \
+  --data_schema='{"id":"int:rand","name":"str:rand","age":"int:rand(18,80)"}'
+
+# Output to console
+./run_dataforge.sh . --files_count=0 --data_lines=10 \
+  --data_schema='{"timestamp":"timestamp:","value":"int:rand"}'
+```
+
+### Option 2: Direct Python execution (all platforms)
+```bash
+# Generate 3 files with random user data
+python -m dataforge . --files_count=3 --file_name=users \
+  --data_schema='{"id":"int:rand","name":"str:rand","age":"int:rand(18,80)"}'
+
+# Output 10 lines to console
 python -m dataforge . --files_count=0 --data_lines=10 \
+  --data_schema='{"timestamp":"timestamp:","value":"int:rand"}'
+```
+
+**Without virtual environment activation:**
+```bash
+# Use python3 instead of python
+python3 -m dataforge . --files_count=0 --data_lines=10 \
   --data_schema='{"timestamp":"timestamp:","value":"int:rand"}'
 ```
 
@@ -95,10 +139,24 @@ python -m dataforge . --files_count=0 --data_lines=10 \
 
 ## 📖 Usage
 
+**Note:** Make sure the virtual environment is activated:
+```bash
+source venv/bin/activate  # macOS/Linux
+# or
+venv\Scripts\activate     # Windows
+```
+
 ### Command Line Arguments
 
 ```bash
+# With venv activated:
 python -m dataforge <path_to_save_files> [OPTIONS]
+
+# Or use the convenience script (macOS/Linux):
+./run_dataforge.sh <path_to_save_files> [OPTIONS]
+
+# Or without venv activation:
+python3 -m dataforge <path_to_save_files> [OPTIONS]
 ```
 
 #### Positional Arguments:
@@ -310,6 +368,13 @@ default_schema = {"id": "int:rand", "timestamp": "timestamp:", "value": "str:ran
 
 ### Running Tests
 
+**First, activate virtual environment:**
+```bash
+source venv/bin/activate  # macOS/Linux
+# or
+venv\Scripts\activate     # Windows
+```
+
 Run all tests:
 ```bash
 pytest
@@ -328,6 +393,11 @@ pytest tests/test_schema_parser.py
 Run verbose mode:
 ```bash
 pytest -v
+```
+
+**Deactivate virtual environment when done:**
+```bash
+deactivate
 ```
 
 ### Test Coverage
@@ -396,8 +466,10 @@ python_capstone_project_ndragancea/
 │   ├── web_logs_schema.json
 │   ├── financial_transactions_schema.json
 │   └── social_media_schema.json
+├── venv/                      # Virtual environment (not in git)
 ├── default.ini                # Default configuration
 ├── requirements.txt           # Python dependencies
+├── run_dataforge.sh           # Convenience script for running (macOS/Linux)
 ├── README.md                  # This file
 └── .gitignore                # Git ignore rules
 ```
@@ -405,6 +477,34 @@ python_capstone_project_ndragancea/
 ---
 
 ## 🛠️ Development
+
+### Setting Up Development Environment
+
+1. **Clone and setup:**
+```bash
+git clone https://github.com/ndragancea-lab/python_capstone_project_ndragancea.git
+cd python_capstone_project_ndragancea
+python3 -m venv venv
+source venv/bin/activate  # macOS/Linux
+pip install -r requirements.txt
+```
+
+2. **Run tests:**
+```bash
+pytest -v
+```
+
+3. **Make changes and test:**
+```bash
+# Edit code...
+pytest tests/
+python -m dataforge . --files_count=0 --data_lines=3 --data_schema='{"id":"int:rand"}'
+```
+
+4. **Deactivate when done:**
+```bash
+deactivate
+```
 
 ### Module Responsibilities
 
@@ -417,6 +517,22 @@ python_capstone_project_ndragancea/
 7. **multiprocessor.py** - Coordinate parallel file generation
 8. **logger.py** - Configure application logging
 9. **utils.py** - Helper functions and utilities
+
+### Convenience Script
+
+The `run_dataforge.sh` script automatically activates the virtual environment:
+
+```bash
+#!/bin/bash
+# Automatically activates venv and runs dataforge
+source venv/bin/activate
+python -m dataforge "$@"
+```
+
+Usage:
+```bash
+./run_dataforge.sh . --files_count=10 --data_schema='{"id":"int:rand"}'
+```
 
 ---
 
