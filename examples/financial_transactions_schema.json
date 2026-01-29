@@ -1,0 +1,14 @@
+{
+  "transaction_id": "str:rand",
+  "account_from": "int:rand(100000,999999)",
+  "account_to": "int:rand(100000,999999)",
+  "amount_cents": "int:rand(100,10000000)",
+  "currency": "str:[\"USD\",\"EUR\",\"GBP\",\"JPY\",\"CHF\"]",
+  "transaction_type": "str:[\"transfer\",\"payment\",\"withdrawal\",\"deposit\",\"refund\"]",
+  "category": "str:[\"salary\",\"shopping\",\"utilities\",\"entertainment\",\"savings\"]",
+  "status": "str:[\"completed\",\"pending\",\"failed\",\"cancelled\"]",
+  "fee_cents": "int:rand(0,500)",
+  "description": "str:",
+  "timestamp": "timestamp:"
+}
+

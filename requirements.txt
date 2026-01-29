@@ -1,0 +1,19 @@
+# DataForge - Test Data Generation Utility
+# Requirements file
+
+# Testing framework
+pytest>=7.0.0
+pytest-cov>=3.0.0
+
+# Note: All other dependencies are from Python standard library:
+# - argparse (built-in)
+# - json (built-in)
+# - os, shutil (built-in)
+# - time (built-in)
+# - random (built-in)
+# - configparser (built-in)
+# - logging (built-in)
+# - uuid (built-in)
+# - multiprocessing (built-in)
+# - sys (built-in)
+

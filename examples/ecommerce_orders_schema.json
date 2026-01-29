@@ -1,0 +1,13 @@
+{
+  "order_id": "str:rand",
+  "customer_id": "int:rand(1000,99999)",
+  "product_name": "str:[\"Laptop\",\"Smartphone\",\"Tablet\",\"Monitor\",\"Keyboard\",\"Mouse\"]",
+  "category": "str:[\"Electronics\",\"Accessories\",\"Computers\"]",
+  "quantity": "int:rand(1,10)",
+  "price": "int:rand(10,5000)",
+  "discount_percent": "int:[0,5,10,15,20]",
+  "payment_method": "str:[\"credit_card\",\"debit_card\",\"paypal\",\"bank_transfer\"]",
+  "status": "str:[\"pending\",\"processing\",\"shipped\",\"delivered\",\"cancelled\"]",
+  "created_at": "timestamp:"
+}
+

@@ -1,0 +1,9 @@
+{
+  "user_id": "str:rand",
+  "session_id": "str:rand",
+  "action": "str:[\"login\",\"logout\",\"view_page\",\"click_button\",\"submit_form\"]",
+  "page": "str:[\"/home\",\"/profile\",\"/settings\",\"/dashboard\",\"/logout\"]",
+  "duration_seconds": "int:rand(1,3600)",
+  "timestamp": "timestamp:"
+}
+

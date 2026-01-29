@@ -1,0 +1,12 @@
+{
+  "sensor_id": "str:rand",
+  "device_type": "str:[\"temperature\",\"humidity\",\"pressure\",\"motion\",\"light\"]",
+  "location": "str:[\"warehouse_a\",\"warehouse_b\",\"office_1\",\"office_2\",\"production_floor\"]",
+  "temperature_celsius": "int:rand(-20,50)",
+  "humidity_percent": "int:rand(10,90)",
+  "pressure_hpa": "int:rand(950,1050)",
+  "battery_level": "int:rand(0,100)",
+  "status": "str:[\"active\",\"idle\",\"maintenance\",\"error\"]",
+  "timestamp": "timestamp:"
+}
+

@@ -1,0 +1,14 @@
+{
+  "post_id": "str:rand",
+  "user_id": "str:rand",
+  "content_type": "str:[\"text\",\"image\",\"video\",\"link\",\"poll\"]",
+  "likes_count": "int:rand(0,10000)",
+  "comments_count": "int:rand(0,500)",
+  "shares_count": "int:rand(0,1000)",
+  "sentiment": "str:[\"positive\",\"neutral\",\"negative\"]",
+  "hashtags_count": "int:rand(0,10)",
+  "mentions_count": "int:rand(0,5)",
+  "is_verified": "str:[\"true\",\"false\"]",
+  "timestamp": "timestamp:"
+}
+

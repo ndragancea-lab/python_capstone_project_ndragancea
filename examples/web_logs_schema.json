@@ -1,0 +1,12 @@
+{
+  "request_id": "str:rand",
+  "client_ip": "str:rand",
+  "http_method": "str:[\"GET\",\"POST\",\"PUT\",\"DELETE\",\"PATCH\"]",
+  "endpoint": "str:[\"/api/users\",\"/api/products\",\"/api/orders\",\"/api/auth\",\"/api/payments\"]",
+  "status_code": "int:[200,201,204,400,401,403,404,500,502,503]",
+  "response_time_ms": "int:rand(10,5000)",
+  "user_agent": "str:[\"Mozilla/5.0\",\"Chrome/90.0\",\"Safari/14.0\",\"Edge/91.0\"]",
+  "bytes_sent": "int:rand(100,100000)",
+  "timestamp": "timestamp:"
+}
+
